@@ -28,15 +28,14 @@ correlation = scaled_df.corr()
 correlation.sort_values(["target"], ascending = False, inplace = True)
 #print(correlation.target)
 
-# creating dependent and independent matrix of features
-scaled_x = scaled_df.iloc[:, :-1]
-y = df.iloc[:, -1]
-
 # feature selection
-from sklearn.feature_selection import SelectKBest
-from sklearn.feature_selection import f_classif
-#x_new = SelectKBest(f_classif, k = 20).fit_transform(scaled_x, y)
+#less_important = ['feature10', 'feature2', 'feature5', 5, 'feature3', 4, 9, 8, 11, 12, 1, 0]
+less_important = ['feature6', 9]
+scaled_df.drop(less_important, axis = 1, inplace = True)
+
+# create scaled independent matrix of features
+scaled_x = scaled_df.iloc[:, :-1]
 
 # create training and test sets
 from sklearn.model_selection import train_test_split
-x_train,x_test,y_train,y_test = train_test_split(x,y, test_size = 0.25, random_state = 31)
+x_train,x_test,y_train,y_test = train_test_split(scaled_x,y, test_size = 0.25, random_state = 31)
