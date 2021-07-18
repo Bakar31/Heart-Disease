@@ -29,8 +29,7 @@ correlation.sort_values(["target"], ascending = False, inplace = True)
 #print(correlation.target)
 
 # feature selection
-#less_important = ['feature10', 'feature2', 'feature5', 5, 'feature3', 4, 9, 8, 11, 12, 1, 0]
-less_important = ['feature6', 9]
+less_important = ['feature6', 9, 8, 11, 12, 1, 0, 'feature4', 3, 4, 'feature3', 5, 'feature5']
 scaled_df.drop(less_important, axis = 1, inplace = True)
 
 # create scaled independent matrix of features

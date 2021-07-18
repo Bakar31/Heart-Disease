@@ -1,5 +1,4 @@
 from preprocessing import *
-#from prep import *
 from sklearn.linear_model import LogisticRegression
 
 # model-1
