@@ -2,7 +2,7 @@ from preprocessing import *
 from sklearn.neighbors import KNeighborsClassifier
 
 # Model-2
-# Parameters taken from griid search best params.
+# Parameters taken from grid search best params.
 knn_clf = KNeighborsClassifier(algorithm = 'auto',
                                leaf_size = 10,
                                n_neighbors = 2,
