@@ -1,6 +1,7 @@
 from preprocessing import *
 from sklearn.ensemble import RandomForestClassifier
 
+# Model-4
 rand_clf = RandomForestClassifier(random_state = 31)
 rand_clf.fit(x_train, y_train)
 print(rand_clf.score(x_test, y_test)) # Score -> 1.00
