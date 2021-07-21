@@ -12,9 +12,6 @@ print(dev.target.value_counts())
 # creating dependent and independent matrix of features
 x = train.iloc[:, :-1]
 y = train.iloc[:, -1]
-
-print(x.head())
-print(y.head())
 print(x.shape, y.shape)
 
 # create training and test sets
