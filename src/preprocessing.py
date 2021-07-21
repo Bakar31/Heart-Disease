@@ -1,7 +1,7 @@
 from input import *
 from input import df
 
-# creating train, test and dev set
+# creating train, and dev set
 train = df.loc[:900] # trainig set
 dev = df.loc[901:] # development set to test overfitting
 
