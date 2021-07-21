@@ -1,5 +1,4 @@
 from input import *
-from input import df
 
 # creating train, and dev set
 train = df.loc[:900] # trainig set
