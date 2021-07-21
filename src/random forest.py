@@ -10,6 +10,7 @@ from sklearn.metrics import classification_report
 y_preds = rand_clf.predict(x_test)
 print(classification_report(y_test, y_preds))
 
+# dev set
 devx = dev.drop('target', axis = 1)
 devy = dev['target']
 
