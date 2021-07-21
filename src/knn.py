@@ -8,8 +8,16 @@ knn_clf = KNeighborsClassifier(algorithm = 'auto',
                                n_neighbors = 2,
                                p = 2)
 knn_clf.fit(x_train, y_train)
-print(knn_clf.score(x_test, y_test)) # Score -> 0.969
+print(knn_clf.score(x_test, y_test))
 
 from sklearn.metrics import classification_report
 y_preds = knn_clf.predict(x_test)
 print(classification_report(y_test, y_preds))
+
+devx = dev.drop('target', axis = 1)
+devy = dev['target']
+
+# to test overfitting
+dev_preds = knn_clf.predict(devx)
+print(knn_clf.score(devx, devy))
+print(classification_report(devy, dev_preds))
